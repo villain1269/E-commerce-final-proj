@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Professional Pizza Shop | Danielle's Crafted Pizza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main class="container">
+    <nav class="breadcrumb" aria-label="Breadcrumb"><a href="index.html">Home</a><span>›</span><span class="here">All Pizza Supplies</span></nav>
+    <div class="page-title">
+      <h1>Professional Pizza Shop</h1>
+      <p id="shop-sub">Premium bases, bulk packaging, high-temp gear, and fresh preps.</p>
+    </div>
+
+    <button class="btn btn-outline filter-toggle" id="filter-toggle" type="button">Filters</button>
+
+    <div class="shop-layout">
+      <aside class="filter-card" id="filter-card">
+        <form id="filter-form" autocomplete="off">
+          <div class="filter-head">
+            <h3>Filter Products</h3>
+            <button type="button" class="link-red" id="clear-filters">Clear All</button>
+          </div>
+          <div class="filter-group">
+            <h4>Category</h4>
+            <div id="filter-cats"></div>
+          </div>
+          <div class="filter-group">
+            <h4>Price Range</h4>
+            <div class="price-row">
+              <input type="number" name="min" min="0" placeholder="₱ Min" aria-label="Minimum price">
+              <span>to</span>
+              <input type="number" name="max" min="0" placeholder="₱ Max" aria-label="Maximum price">
+            </div>
+          </div>
+          <div class="filter-group">
+            <h4>Best Suited For</h4>
+            <label class="check-row"><input type="checkbox" name="suit" value="home"><span>Home Baking</span></label>
+            <label class="check-row"><input type="checkbox" name="suit" value="commercial"><span>Commercial Pizzeria</span></label>
+            <label class="check-row"><input type="checkbox" name="suit" value="bulk"><span>Bulk Events</span></label>
+          </div>
+        </form>
+      </aside>
+
+      <section>
+        <div class="results-bar" id="results-bar">
+          <span id="results-info"></span>
+          <label class="sort-wrap">Sort By:
+            <select id="sort-select">
+              <option value="best">Best Selling</option>
+              <option value="low">Price: Low to High</option>
+              <option value="high">Price: High to Low</option>
+              <option value="name">Name: A to Z</option>
+            </select>
+          </label>
+        </div>
+        <div class="product-grid three" id="shop-grid"></div>
+        <div class="pagination" id="pagination"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Secure Checkout | Danielle's Crafted Pizza</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-layout="checkout">
+  <div id="site-header"></div>
+
+  <main id="checkout-wrap">
+    <div class="container checkout-layout">
+      <form id="checkout-form" novalidate>
+        <div class="form-card">
+          <h3>1. Delivery Shipping Information</h3>
+          <div class="form-row">
+            <div class="field">
+              <label for="firstName">First Name *</label>
+              <input type="text" id="firstName" name="firstName" autocomplete="given-name">
+            </div>
+            <div class="field">
+              <label for="lastName">Last Name *</label>
+              <input type="text" id="lastName" name="lastName" autocomplete="family-name">
+            </div>
+          </div>
+          <div class="field">
+            <label for="email">Email *</label>
+            <input type="email" id="email" name="email" autocomplete="email">
+          </div>
+          <div class="field">
+            <label for="address">Street Address *</label>
+            <input type="text" id="address" name="address" autocomplete="street-address">
+          </div>
+          <div class="form-row">
+            <div class="field">
+              <label for="city">City *</label>
+              <input type="text" id="city" name="city" autocomplete="address-level2">
+            </div>
+            <div class="field">
+              <label for="postal">Postal Code *</label>
+              <input type="text" id="postal" name="postal" inputmode="numeric" maxlength="4" autocomplete="postal-code">
+            </div>
+          </div>
+          <div class="field">
+            <label for="phone">Phone Number *</label>
+            <input type="tel" id="phone" name="phone" placeholder="09171234567" autocomplete="tel">
+          </div>
+          <div class="field">
+            <label for="notes">Order Notes (optional)</label>
+            <textarea id="notes" name="notes" rows="2" placeholder="Delivery instructions, preferred time, etc."></textarea>
+          </div>
+        </div>
+
+        <div class="form-card">
+          <h3>2. Shipping Method</h3>
+          <label class="ship-option">
+            <input type="radio" name="shipping" value="express" checked>
+            <span class="opt-text">Express Food Dispatch (Guaranteed Fresh)<small>Delivered in insulated, temperature-protected packs.</small></span>
+            <span class="opt-price" id="price-express">₱250</span>
+          </label>
+          <label class="ship-option">
+            <input type="radio" name="shipping" value="standard">
+            <span class="opt-text">Standard Delivery<small>Free on orders over ₱3,000. Best for packaging and equipment.</small></span>
+            <span class="opt-price" id="price-standard">₱150</span>
+          </label>
+        </div>
+
+        <div class="form-card">
+          <h3>3. Payment Method</h3>
+          <label class="pay-option"><input type="radio" name="payment" value="cod"><span class="opt-text">Cash on Delivery<small>Pay when your order arrives.</small></span></label>
+          <label class="pay-option"><input type="radio" name="payment" value="gcash"><span class="opt-text">GCash<small>Payment instructions are sent after you place your order.</small></span></label>
+          <label class="pay-option"><input type="radio" name="payment" value="bank"><span class="opt-text">Bank Transfer<small>Payment instructions are sent after you place your order.</small></span></label>
+          <span class="inline-error" id="payment-error"></span>
+          <p class="note">This is a school project. No real payment is processed and no card details are collected.</p>
+        </div>
+
+        <label class="check-line">
+          <input type="checkbox" name="terms">
+          <span>I confirm my order details are correct and I agree to the order terms.</span>
+        </label>
+        <span class="inline-error" id="terms-error"></span>
+      </form>
+
+      <div class="checkout-summary-wrap">
+        <aside class="summary-box" id="checkout-summary"></aside>
+        <aside class="summary-box secure-card">
+          <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.500 8-8 9-4.500-1-8-4-8-9V6z"/></svg> Demo Checkout</h4>
+          <p>Nothing is charged. Your order details are saved only in this browser using localStorage.</p>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/checkout.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Danielle's Crafted Pizza | Dough, Boxes &amp; Supplies for Pizza Sellers</title>
+  <meta name="description" content="Pizza dough, bases, packaging, equipment and ready-made pizza for home bakers, food entrepreneurs and pizza lovers.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div id="site-header"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="tag-label">Crafted Quality</span>
+        <h1>Everything You Need For Pizza Success</h1>
+        <p class="lead">From cold-fermented artisan dough to custom business packaging and pro paddles. Made for home pizzaiolos and fast-growing food businesses.</p>
+        <div class="hero-actions">
+          <a href="shop.html" class="btn">Shop Dough &amp; Bases</a>
+          <a href="#wholesale" class="btn btn-outline-light">Wholesale Program</a>
+        </div>
+      </div>
+      <div class="hero-image ph ph-dark">[HERO BANNER]</div>
+    </section>
+
+    <!-- Categories -->
+    <section class="section" id="categories">
+      <div class="container">
+        <div class="section-head">
+          <h2>Explore Our Specialist Categories</h2>
+          <p>Professional-grade ingredients and gear cataloged for precision browsing.</p>
+        </div>
+        <div class="category-grid" id="category-grid"></div>
+      </div>
+    </section>
+
+    <!-- Featured products -->
+    <section class="section" id="featured" style="padding-top:1rem">
+      <div class="container">
+        <div class="section-head-row">
+          <div class="section-head">
+            <h2>Highly Recommended Products</h2>
+            <p>The essential gear and foundational ingredients used daily by top chefs.</p>
+          </div>
+          <div class="arrows">
+            <button class="arrow-btn" id="feat-prev" aria-label="Previous products">←</button>
+            <button class="arrow-btn red" id="feat-next" aria-label="Next products">→</button>
+          </div>
+        </div>
+        <div class="carousel-track" id="featured-products"></div>
+      </div>
+    </section>
+
+    <!-- Why trust us -->
+    <section class="section section-gray" id="why-us">
+      <div class="container">
+        <div class="section-head center"><h2>Why Food Enthusiasts &amp; Pizzerias Trust Danielle's</h2></div>
+        <div class="why-grid">
+          <div class="why-card">
+            <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M12 3l2.700 5.600 6.100.8-4.500 4.200 1.100 6.100L12 16.800 6.600 19.700l1.100-6.100L3.200 9.400l6.100-.8z"/></svg></div>
+            <h3>Cold-Fermented &amp; Handcrafted</h3>
+            <p>Our dough stands out with a 24-hour cold fermentation, so every ball stretches easily and bakes up airy.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M3 7h11v9H3zM14 10h4l3 3v3h-7"/><circle cx="7" cy="18" r="1.500"/><circle cx="17" cy="18" r="1.500"/></svg></div>
+            <h3>Business-Ready Packs</h3>
+            <p>Seller-friendly packs of 10 and 50 keep your cost per pizza low, with boxes that keep pies crisp on delivery.</p>
+          </div>
+          <div class="why-card">
+            <div class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><circle cx="12" cy="9" r="5"/><path d="M9 13.500L8 21l4-2 4 2-1-7.500"/></svg></div>
+            <h3>Culinary Professionalism</h3>
+            <p>Sturdy paddles, sharp slicers and serving plates chosen for stalls, shops and busy home kitchens.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Starter Kit Builder -->
+    <section class="section" id="starter-kit">
+      <div class="container kit-layout">
+        <div class="kit-intro">
+          <span class="tag-label">Starter Kit Builder</span>
+          <h2>Start your pizza business in one click</h2>
+          <p>Tell us your business type and budget. We'll recommend a starter package of dough, boxes and equipment with an estimated total.</p>
+
+          <form id="kit-form" class="kit-form" novalidate>
+            <fieldset>
+              <legend>Business Type</legend>
+              <div class="option-row">
+                <label><input type="radio" name="businessType" value="home"><span>Home Business</span></label>
+                <label><input type="radio" name="businessType" value="stall"><span>Food Stall</span></label>
+                <label><input type="radio" name="businessType" value="shop"><span>Small Shop</span></label>
+              </div>
+            </fieldset>
+            <fieldset>
+              <legend>Budget</legend>
+              <div class="option-row">
+                <label><input type="radio" name="budget" value="3000"><span>₱3,000</span></label>
+                <label><input type="radio" name="budget" value="5000"><span>₱5,000</span></label>
+                <label><input type="radio" name="budget" value="10000"><span>₱10,000</span></label>
+              </div>
+            </fieldset>
+            <button type="submit" class="btn btn-large">Recommend My Kit</button>
+          </form>
+        </div>
+        <div class="kit-result" id="kit-result" aria-live="polite">
+          <div class="kit-placeholder">
+            <h3>Your recommended kit will appear here</h3>
+            <p style="margin:0">Pick a business type and budget to get started.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Wholesale band -->
+    <section class="band" id="wholesale">
+      <div class="band-image ph ph-dark">[WHOLESALE IMAGE]</div>
+      <div class="band-copy">
+        <span class="tag-label light">Wholesale Opportunities</span>
+        <h2>Scaling Up Your Pizzeria Operations?</h2>
+        <p>Get bulk discounts, scheduled recurring dough deliveries, custom printed box branding options, and priority support directly from our dispatch team.</p>
+        <a href="shop.html?category=boxes" class="btn btn-amber">Shop Bulk Packs</a>
+      </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section" id="testimonials">
+      <div class="container">
+        <div class="section-head center"><h2>Loved By Serious Pizzaiolos</h2></div>
+        <div class="testi-grid">
+          <div class="testi">
+            <span class="quote-mark">“</span>
+            <p>Their cold-fermented balls rise beautifully. Our customers can't tell it's contracted dough. Essential partner!</p>
+            <cite>— Chef Marco, Crust &amp; Co.</cite>
+          </div>
+          <div class="testi">
+            <span class="quote-mark">“</span>
+            <p>The 12-inch boxes fit perfectly, don't sag, and keep our base crispiness all the way to the customer's table.</p>
+            <cite>— Sarah L., Napoli Delivery Hub</cite>
+          </div>
+          <div class="testi">
+            <span class="quote-mark">“</span>
+            <p>Great paddle and a handy starter kit. I launched my home pizza business with one order. Sample review.</p>
+            <cite>— Dave K., Home Pizza Seller</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+      <div class="container news-wrap">
+        <div>
+          <h3>Get Dough Recipes &amp; Special Deals</h3>
+          <p>Fresh weekly formulas, expert guide alerts &amp; wholesale discount updates.</p>
+        </div>
+        <form class="news-form" id="newsletter-form" novalidate>
+          <input type="email" placeholder="Enter email address" aria-label="Email address">
+          <button type="submit" class="btn btn-dark">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/starter-kit.js"></script>
+</body>
+</html>
